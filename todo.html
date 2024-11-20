@@ -3,29 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List | To-Do List Creator</title>
+    <title>About | To-Do List Creator</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Simple JavaScript to handle task addition and deletion
-        function addTask() {
-            const taskInput = document.getElementById('task-input');
-            const taskList = document.getElementById('task-list');
-            if (taskInput.value.trim() !== '') {
-                const newTask = document.createElement('li');
-                newTask.innerHTML = taskInput.value + ' <button onclick="deleteTask(this)">Delete</button>';
-                taskList.appendChild(newTask);
-                taskInput.value = ''; // Clear the input field
-            }
-        }
-
-        function deleteTask(button) {
-            button.parentElement.remove(); // Remove the task item
-        }
-    </script>
 </head>
 <body>
     <header>
-        <h1>To-Do List</h1>
+        <h1>About To-Do List Creator</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -33,14 +16,19 @@
         </nav>
     </header>
     <main>
-        <h2>Your Tasks</h2>
-        <div class="todo-container">
-            <input type="text" id="task-input" placeholder="Enter a new task">
-            <button onclick="addTask()">Add Task</button>
-        </div>
-        <ul id="task-list">
-            <!-- Tasks will appear here -->
+        <h2>About the App</h2>
+        <p>The To-Do List Creator is a simple yet powerful tool to help you manage your tasks efficiently.</p>
+        <p>Whether you're planning daily chores, work-related tasks, or personal goals, this app allows you to add, delete, and organize tasks easily. It's designed to be intuitive and user-friendly, making task management a breeze.</p>
+
+        <h3>Features:</h3>
+        <ul>
+            <li>Simple task addition and deletion</li>
+            <li>Responsive design that works on mobile and desktop</li>
+            <li>Clean and minimalistic interface for easy task management</li>
         </ul>
+
+        <h3>How It Works:</h3>
+        <p>Just type in your task, hit "Add," and start organizing your day. You can delete tasks as you complete them, ensuring that your to-do list is always up to date.</p>
     </main>
 </body>
 </html>
