@@ -1,25 +1,110 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #eaeaea;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Header Styles */
 header {
-    background: #333;
-    color: white;
-    padding: 10px 20px;
+    background: #4a4a4a;
+    color: #fff;
+    padding: 15px 20px;
     text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-    color: white;
-    margin: 0 10px;
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+nav a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Main Styles */
 main {
     padding: 20px;
     text-align: center;
+}
+
+/* Game Board Styles */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Cell Styles */
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: #fff;
+    border: 2px solid #4a4a4a;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a90e2; /* Blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
 }
