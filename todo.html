@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List | To-Do List Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Simple JavaScript to handle task addition and deletion
+        function addTask() {
+            const taskInput = document.getElementById('task-input');
+            const taskList = document.getElementById('task-list');
+            if (taskInput.value.trim() !== '') {
+                const newTask = document.createElement('li');
+                newTask.innerHTML = taskInput.value + ' <button onclick="deleteTask(this)">Delete</button>';
+                taskList.appendChild(newTask);
+                taskInput.value = ''; // Clear the input field
+            }
+        }
+
+        function deleteTask(button) {
+            button.parentElement.remove(); // Remove the task item
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="todo.html">To-Do List</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Tasks</h2>
+        <div class="todo-container">
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will appear here -->
+        </ul>
+    </main>
+</body>
+</html>
